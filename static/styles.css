@@ -1,0 +1,136 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0c0c0c, #0e0d0d);
+    color: #fff;
+}
+
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #733dd6;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #16c4c4;
+    border-radius: 5px;
+}
+
+/* Form Section */
+.form-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-horizontal label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.form-horizontal input[type="number"],
+.form-horizontal input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* form {
+    display: flex;
+    gap: 10px;
+}
+
+form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+} */
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #2a5298;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #732996;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.image-container {
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.image-container p {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 10px;
+    text-align: center;
+    background: #00060f;
+}

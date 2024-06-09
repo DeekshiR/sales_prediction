@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Website</title>
+    <link rel="stylesheet" href="../static/styles.css"  media="screen,projection" type="text/css" >
+</head>
+
+<body>
+    <header >
+        <nav >
+            <ul>
+                <li><a href="#home">Stores</a></li>
+                <li><a href="#about">Features</a></li>
+                <li><a href="#services">Train</a></li>
+                <li><a href="#contact">Test</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="image-gallery">
+            <div class="image-container" onclick="showResult('KNN regression model')">
+                <img src="../static/Designer1.png" alt="Image 1">
+                <p>KNN regression model</p>
+            </div>
+            <div class="image-container" onclick="showResult('Decision Tree Regressor')">
+                <img src="../static/rf.png" alt="Image 2">
+                <p>Decision Tree Regressor</p>
+            </div>
+            <div class="image-container" onclick="showResult('Random Forest Regressor')">
+                <img src="../static/Designer.png" alt="Image 3">
+                <p>Random Forest Regressor</p>
+            </div>
+            <div class="image-container" onclick="showResult('XGBoost Regressor')">
+                <img src="../static/Designer2.png" alt="Image 3">
+                <p>XGBoost Regressor</p>
+            </div>
+        </section>
+        <section class="form-section">
+            <div class="form-container">
+                <form class="form-horizontal" action="/predict" method="post">
+                    <div class="form-group">
+                        <label for="Store">Store:</label>
+                        <input type="number" id="Store" name="Store" required><br><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="Dept">Dept:</label>
+                        <input type="number" id="Dept" name="Dept" required><br><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="Date">Date:</label>
+                        <input type="date" id="Date" name="Date" required><br><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="Temperature">Temperature:</label>
+                        <input type="number" id="Temperature" name="Temperature" step="0.01" required><br><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="Fuel_Price">Fuel Price:</label>
+                        <input type="number" id="Fuel_Price" name="Fuel_Price" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="MarkDown1">Mark Down 1:</label>
+                        <input type="number" id="MarkDown1" name="MarkDown1" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="MarkDown2">Mark Down 2:</label>
+                        <input type="number" id="MarkDown2" name="MarkDown2" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="MarkDown3">Mark Down 3:</label>
+                        <input type="number" id="MarkDown3" name="MarkDown3" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="MarkDown4">Mark Down 4:</label>
+                        <input type="number" id="MarkDown4" name="MarkDown4" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="MarkDown5">Mark Down 5:</label>
+                        <input type="number" id="MarkDown5" name="MarkDown5" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="CPI">CPI:</label>
+                        <input type="number" id="CPI" name="CPI" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Unemployment">Unemployment:</label>
+                        <input type="number" id="Unemployment" name="Unemployment" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Size">Size:</label>
+                        <input type="number" id="Size" name="Size" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="Type_B">Type B:</label>
+                        <input type="checkbox" id="Type_B" name="Type_B"><br><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="Type_C">Type C:</label>
+                        <input type="checkbox" id="Type_C" name="Type_C"><br><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="IsHoliday_True">Is Holiday:</label>
+                        <input type="checkbox" id="IsHoliday_True" name="IsHoliday_True"><br><br>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" id="submit" name="submit" value="Submit" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+        </section>
+        <h3 class='text-primary'>Prediction is {{ prediction }}</h3>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Sample Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showResult(imageName) {
+            alert("You clicked on " + imageName);
+        }
+    </script>
+</body>
+
+</html>
